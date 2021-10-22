@@ -1,0 +1,33 @@
+:local(.stageItem) {
+  display: flex;
+  width: 500px;
+  align-items: center;
+
+  .order {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #0000ffa3;
+    line-height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  > div + div {
+    margin-left: 10%;
+  }
+
+  > div:nth-child(1) {
+    width: 40%;
+  }
+
+  > div:nth-child(2) {
+    width: 40%;
+  }
+}
+
+:local(.stage) {
+  color: red;
+}

@@ -1,0 +1,110 @@
+.basic-search-group() {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  padding-left: 16px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+
+.normal-page {
+  padding: 0 20px;
+  position: relative;
+
+  .page-title {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+}
+
+// 筛选框
+@formLabelWidth: 120px;
+
+.filterBar() {
+  font-size: 14px;
+  color: @mainTextColor;
+  background: #fff;
+  padding: 0 16px 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+
+  .ant-form-item {
+    padding-left: 16px;
+    margin: 0;
+
+    display: flex;
+
+    &.button {
+      padding-top: 48px;
+    }
+  }
+
+  .ant-form-item-label {
+    line-height: 18px;
+    padding: 16px 0 12px 0;
+
+    & > label {
+      color: rgba(6, 27, 54, 0.6);
+      font-size: 12px;
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  .ant-form-item-control {
+    line-height: 32px;
+  }
+}
+
+.ant-form-item {
+  color: @mainTextColor;
+}
+// 导航栏下边的按钮组合
+.topButtonGroup {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+  position: absolute;
+  top: -48px;
+  right: 20px;
+
+  .ant-btn {
+    margin-left: 16px;
+  }
+}
+
+// 隔行换色的表格
+.alternateColorTable() {
+  .ant-table-tbody tr td {
+    border-color: rgba(42, 93, 255, 0.08);
+  }
+
+  .ant-table-tbody tr:nth-child(2n-1) td {
+    background-color: rgba(42, 93, 255, 0.08);
+  }
+}
+
+// dropdown
+.ant-dropdown-menu-item > a,
+.ant-dropdown-menu-submenu-title > a {
+  color: @mainTextColor;
+}
+
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  &:hover {
+    background-color: @onePrimaryColor;
+  }
+}
+
+@primaryColor: rgba(42, 93, 255, 1); // 主题色
+@onePrimaryColor: rgba(42, 93, 255, 0.1); // 主题色
+@mainTextColor: rgba(6, 27, 54, 0.8); // 页面标题/td
+@secondTextColor: rgba(6, 27, 54, 0.6); // 表单项label
+@thirdTextColor: rgba(6, 27, 54, 0.4); // 表单内容/th
+@forthTextColor: rgba(6, 27, 54, 0.3); // 表单placeholder
+@shadowColor: rgba(0, 21, 41, 0.08); // shadow

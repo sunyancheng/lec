@@ -1,0 +1,25 @@
+@import "./commom.less";
+
+:local(.campusTree) {
+  .selectDrawerTree();
+
+  & > li {
+    &.ant-tree-treenode-selected {
+      & > .ant-tree-child-tree {
+        width: 652px !important;
+
+        & > li {
+          & > .ant-tree-child-tree {
+            background: #fafafa;
+            margin-left: -1px;
+            border-left: 2px solid #fff;
+            flex-wrap: wrap;
+            padding-left: 0;
+            display: flex;
+            width: 652px !important;
+          }
+        }
+      }
+    }
+  }
+}

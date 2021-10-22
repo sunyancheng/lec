@@ -1,0 +1,36 @@
+@import "../shared/styles.less";
+
+:local(.formItemGroup) {
+  width: 100%;
+  display: flex;
+  // align-items: center;
+  margin-bottom: 24px;
+
+  // > .ant-col:nth-child(1) {
+  //   line-height: 40px;
+  //   text-align: right;
+  //   width: @formLabelWidth;
+  //   font-size: 14px;
+  //   color: rgba(6, 27, 54, 0.8);
+
+  //   &::after {
+  //     content: "*";
+  //     color: red;
+  //   }
+  // }
+
+  > .ant-form-item-control-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .ant-form-item {
+      margin: 0;
+      flex: 1;
+      display: flex;
+    }
+
+    // .ant-form-item-label {
+    //   width: 80px;
+    // }
+  }
+}

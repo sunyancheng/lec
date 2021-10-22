@@ -1,0 +1,52 @@
+@import "./commom.less";
+
+:local(.productTree) {
+  .selectDrawerTree();
+
+  & > li {
+    &.ant-tree-treenode-selected {
+      & > .ant-tree-child-tree {
+        & > li {
+          & > .ant-tree-child-tree {
+            border-left: 2px solid #fff;
+            background: #f6f6f6;
+            padding-left: 0;
+
+            & > li {
+              border-bottom: 2px solid #fff;
+              width: 545px;
+              flex-shrink: 0;
+
+              &:last-child {
+                border-bottom: none;
+              }
+
+              & > .ant-tree-node-content-wrapper {
+                width: 80px;
+                display: block;
+                flex-shrink: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border-right: 2px solid #fff;
+                height: 32px;
+                line-height: 28px;
+                margin-bottom: 0;
+              }
+
+              & > .ant-tree-child-tree {
+                background: #fcfcfc;
+                margin-left: -1px;
+                border-left: 1px solid #fff;
+                flex-wrap: wrap;
+                padding-left: 0;
+                width: 499px;
+                display: flex;
+                padding-right: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

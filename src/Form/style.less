@@ -1,0 +1,72 @@
+@import "../shared/styles.less";
+
+:local(.checkbox-all-check) {
+  display: inline-block;
+  vertical-align: top;
+
+  + .ant-checkbox-group {
+    width: fit-content !important;
+  }
+
+  .ant-checkbox-wrapper {
+    min-width: 70px !important;
+  }
+}
+
+:local(.Form) {
+  width: 100%;
+
+  .search-button-list {
+    button + button {
+      margin-left: 16px;
+    }
+  }
+
+  .ant-form-item {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .ant-select,
+  .ant-input {
+    width: 200px;
+  }
+
+  .ant-calendar-picker {
+    .ant-input {
+      width: 220px;
+    }
+  }
+
+  .second-title,
+  .sub-title {
+    color: rgba(6, 27, 54, 0.8);
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  // 重置 checkbox 样式
+  .ant-checkbox-wrapper {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    min-width: 90px;
+  }
+
+  .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+    margin-left: 0;
+  }
+}
+
+:local(.formMode) {
+  .ant-form-item {
+    width: 30%;
+    display: inline-flex;
+  }
+
+  .ant-form-item-label {
+    width: @formLabelWidth;
+    flex-shrink: 0;
+  }
+}

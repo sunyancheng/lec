@@ -1,0 +1,31 @@
+@import "../shared/styles.less";
+
+:local(.FormModal) {
+  color: @mainTextColor;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .ant-input,
+  .ant-select {
+    width: 200px;
+  }
+
+  .ant-form-item-label {
+    & > label {
+      font-size: 14px;
+      color: @mainTextColor;
+
+      // &::after {
+      //   content: "*";
+      //   color: #f00;
+      // }
+    }
+  }
+
+  .midRow {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 6px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "./styles.less";
+@import "./commom.less";
+
+:local(.singleCampusList) {
+  color: @oneHundredTextColor;
+  display: flex;
+  width: 641px;
+  position: relative;
+  height: calc(100vh - 122px);
+  min-height: 278px;
+}
+
+:local(.radioGroup) {
+  color: @oneHundredTextColor;
+  width: 100%;
+
+  .fl_radio.ant-radio-wrapper {
+    width: 25%;
+    margin-right: 0;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 4px;
+    padding-left: 4px;
+
+    &:hover {
+      background-color: @threePrimaryColor;
+    }
+  }
+}

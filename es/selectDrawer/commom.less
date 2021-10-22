@@ -1,0 +1,211 @@
+@import "./styles.less";
+
+:local(.drawerTitle) {
+  display: flex;
+  align-items: center;
+  color: @oneHundredTextColor;
+
+  .ant-input-search {
+    width: 200px;
+    margin-left: auto;
+  }
+}
+
+:local(.drawerFooter) {
+  .drawerFooter();
+
+  .ant-pagination-simple {
+    margin-right: auto;
+  }
+}
+
+:local(.tabs) {
+  color: @oneHundredTextColor;
+
+  &.ant-tabs-card {
+    .ant-tabs-card-bar {
+      .ant-tabs-nav-container {
+        height: 28px;
+      }
+
+      .ant-tabs-tab {
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+        padding: 0 8px;
+
+        &:hover {
+          color: @primaryColor;
+        }
+      }
+
+      .ant-tabs-tab-active {
+        color: @primaryColor;
+      }
+    }
+  }
+}
+
+:local(.drawer) {
+  color: @oneHundredTextColor;
+
+  .noData {
+    background: url(@noDataImage) no-repeat center 20px;
+    background-size: 369px auto;
+    min-height: 217px;
+    padding-top: 177px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: @eightyTextColor;
+    line-height: 20px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
+
+  .check_tree {
+    border-top: 1px solid #eee;
+    margin-top: 28px;
+    margin-bottom: 50px;
+  }
+
+  .content {
+    padding-bottom: 70px;
+  }
+
+  .ant-drawer-header {
+    padding: 8px 16px;
+  }
+
+  .ant-drawer-title {
+    font-size: 14px;
+  }
+
+  .ant-drawer-body {
+    padding: 10px 16px;
+    height: calc(100vh - 55px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+.selectDrawerTree() {
+  &.ant-tree {
+    color: @oneHundredTextColor;
+    display: flex;
+    width: 661px;
+    position: relative;
+    height: calc(100vh - 122px);
+    min-height: 278px;
+    margin: -28px 0 0 -1px;
+
+    .ant-tree-node-content-wrapper {
+      color: @oneHundredTextColor;
+    }
+
+    .ant-tree-switcher {
+      display: none !important;
+    }
+
+    & > li {
+      width: 63px;
+
+      & > span.ant-tree-node-content-wrapper {
+        border-radius: 0 4px 0 0;
+        margin-right: 4px;
+        padding-left: 4px;
+        width: 38px;
+        transition: none;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #eee;
+
+        &,
+        &:hover {
+          background-color: #eee !important;
+        }
+      }
+
+      & > span.ant-tree-checkbox {
+        border-radius: 4px 0 0 0;
+        margin: 0 !important;
+        height: 28px !important;
+        padding-top: 6px !important;
+        padding-left: 6px !important;
+        background: #eee;
+        border-top: 1px solid #eee;
+        border-left: 1px solid #eee;
+
+        &.ant-tree-checkbox-checked::after {
+          border-color: transparent;
+        }
+      }
+
+      & > .ant-tree-child-tree {
+        display: none;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        height: calc(100vh - 153px) !important;
+        padding-left: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        border-radius: 0 4px 4px 4px;
+
+        li {
+          display: flex;
+        }
+      }
+
+      &.ant-tree-treenode-selected {
+        & > span.ant-tree-node-content-wrapper {
+          color: @primaryColor;
+
+          .ant-tree-title {
+            font-weight: 500;
+          }
+
+          &,
+          &:hover {
+            background-color: #fff !important;
+          }
+        }
+
+        & > span.ant-tree-checkbox {
+          background: #fff;
+        }
+
+        & > .ant-tree-child-tree {
+          display: block !important;
+          padding-top: 10px;
+
+          & > li {
+            border-bottom: 2px solid #fff;
+            background: #eee;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            & > .ant-tree-node-content-wrapper {
+              width: 80px;
+              display: block;
+              flex-shrink: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.tooltipContent) {
+  .ant-tooltip-inner {
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 12px;
+  }
+}
